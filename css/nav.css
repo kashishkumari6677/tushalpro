@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 10px;
+  
+}
+body{
+    overflow-x: hidden;
+}
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 50px;
+}
+.logo{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-size: 20px;
+}
+.logo span{
+    color:rgb(244, 117, 71) ;
+    font-weight: 900;
+}
+.menuContainer{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-direction: row-reverse;
+}
+
+.menuicon {
+    width: 40px;
+    display: none;
+   
+}
+
+.menuicon img {
+    width: 100%;
+    color: white;
+}
+
+.menu{
+    display: flex;
+    gap: 50px;
+    list-style: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.menu a {
+    text-decoration: none;
+    list-style: none;
+    color: gray;
+    display: flex;
+}
+.menu :hover{
+    color: black;
+}
+.buttons{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+.login{
+    border: none;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+}
+.login img{
+    width: 20px;
+    
+}
+.property{
+    all: unset;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(244, 117, 71);
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    padding: 5px 20px;
+    color: white;
+    
+}
+.property img{
+    width: 30px;
+}
+@media only screen and (max-width:1000px) {
+    nav{
+       justify-content: space-between; 
+    }
+    .menuicon {
+        display: inline;
+    
+    }
+   
+    .menu {
+        background-color: rgb(244, 237, 237);
+        color: black;
+        width: 30%;
+        position:fixed ;
+        top: 0;
+        right: 0;
+        flex-direction: column;
+        height: 100vh;
+        align-items: flex-start;
+        display: none;
+       padding: 30px;
+        
+    }
+    .show {
+        display: flex;
+        animation-name: show;
+        animation-duration: 0.3s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
+        transform-origin: right;
+    }
+
+    @keyframes show {
+        from {
+            transform: scaleY(0);
+        }
+
+        to {
+            transform: scaleY(1);
+        }
+    }
+    .hide{
+        display: none;
+    }
+}
+@media only screen and (max-width:1000px){
+    .menu{
+        width: 50%;
+    }
+}
